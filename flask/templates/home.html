@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+</br>
+
+<h3><font color=white>Predicting Employee Attrition using Random Forest</font></h3>
+
+
+
+<form method=post action="/attrition">
+  <b><font color=white> Satifaction_Level:</font> </b> 
+  <input type="number" name="satifaction_level">
+  <b> <font color=white>Last_Evaluation:</font> </b>
+  <input type="number" name="last_evaluation">
+
+  <br><br>
+  <b><font color=white>Time spent at company:</font> </b>
+  <input type="number" name="time_spend_company">
+  <b><font color =white>Had an accident at work :</font> </b>
+  <input type="number" name="Work_accident">
+  
+
+  <br><br>
+  <b><font color=white>Promoted in the last 5 years:</font> </b>
+  <input type="number" name="promotion_last_5years">
+  <b><font color=white>Department R&D:</font></b>
+  <input type="number" name="department_RandD">
+  <br><br>
+  <b><font color=white>Department HR:</font> </b>
+  <input type="number" name="department_hr">
+  <b><font color=white>Department Management:</font> </b>
+  <input type="number" name="department_management">
+  <br><br>
+  <b><font color=white>Salary High:</font> </b>
+  <input type="number" name="salary_high">
+  <b><font color=white>Salary Low:</font> </b>
+  <input type="number" name="salary_low">
+
+
+  <br><br>
+  <input type=submit value='Get Prediction' >
+</form>
+
+
+
+  <h6> <font color=red>   {{ retJson }}  </font></h6>
+
+</br>
+
+  
+
+
+
+{% endblock %}
